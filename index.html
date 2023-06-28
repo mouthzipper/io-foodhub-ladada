@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        background-color: white;
+      }
+
+      .photo-gallery {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+      }
+
+      .main-photo img {
+        object-fit: contain;
+        height: auto;
+      }
+
+      .sub-photos {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+      }
+
+      .sub-photos img {
+        width: calc((100% / 7) - 10px);
+        height: auto;
+        object-fit: contain;
+        background-color: wheat;
+      }
+
+      @media screen and (max-width: 600px) {
+        .main-photo img,
+        .sub-photos img {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="photo-gallery">
+      <div class="main-photo">
+        <img src="./images/0.jpeg" alt="Main Photo" />
+      </div>
+      <div class="sub-photos">
+        <img src="./images/1.jpeg" alt="Sub Photo 1" />
+        <img src="./images/2.jpeg" alt="Sub Photo 2" />
+        <img src="./images/3.jpeg" alt="Sub Photo 3" />
+        <img src="./images/4.jpeg" alt="Sub Photo 4" />
+        <img src="./images/5.jpeg" alt="Sub Photo 5" />
+        <img src="./images/6.jpeg" alt="Sub Photo 6" />
+      </div>
+    </div>
+  </body>
+</html>
